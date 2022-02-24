@@ -11,6 +11,13 @@ def test_poynoial_add():
     c = a+b 
     assert c.coefficients == [0, 0, 2]
 
+def test_poynoial_multiply():
+    a = Polynomial([1,-1,1])
+    b = Polynomial([-1,1,1])
+    c = a*b 
+    assert c.coefficients == [-1, 2, -1, 0, 1]
+
 def test_broken_test():
     a = Polynomial([1,-1,1])
     assert a(5) == 3
+
